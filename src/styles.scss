@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+// @import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'assets/scss/_bootstrap-rtl.min';
+@import '_variables.scss';
+@import '_typography.scss';
+
+@font-face {
+  font-family: 'fontello';
+  src: url('/assets/fonts/fontawesome/font/fontello.eot?96126717');
+  src: url('/assets/fonts/fontawesome/font/fontello.eot?96126717#iefix') format('embedded-opentype'),
+       url('/assets/fonts/fontawesome/font/fontello.woff2?96126717') format('woff2'),
+       url('/assets/fonts/fontawesome/font/fontello.woff?96126717') format('woff'),
+       url('/assets/fonts/fontawesome/font/fontello.ttf?96126717') format('truetype'),
+       url('/assets/fonts/fontawesome/font/fontello.svg?96126717#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import 'assets/fonts/fontawesome/css/fontello.scss'

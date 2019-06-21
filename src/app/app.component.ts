@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'news-task';
+  
+  constructor(translate: TranslateService) {
+    //I can save it in local storage and load it from there
+    translate.setDefaultLang('ar');
+    translate.use('ar');      
+  }
 }

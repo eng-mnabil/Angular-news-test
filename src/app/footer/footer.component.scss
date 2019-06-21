@@ -1,0 +1,169 @@
+@import '../../_variables.scss';
+
+.islamic-footer {    
+    background: rgba(242,108,79,1);
+    background: -moz-linear-gradient(left, rgba(242,108,79,1) 0%, rgba(251,175,93,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(242,108,79,1)), color-stop(100%, rgba(251,175,93,1)));
+    background: -webkit-linear-gradient(left, rgba(242,108,79,1) 0%, rgba(251,175,93,1) 100%);
+    background: -o-linear-gradient(left, rgba(242,108,79,1) 0%, rgba(251,175,93,1) 100%);
+    background: -ms-linear-gradient(left, rgba(242,108,79,1) 0%, rgba(251,175,93,1) 100%);
+    background: linear-gradient(to right, rgba(242,108,79,1) 0%, rgba(251,175,93,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f26c4f', endColorstr='#fbaf5d', GradientType=1 );
+    
+    border-top: 5px solid $secondary-color;
+    padding: 30px 0 70px;
+}
+
+.footer {
+    //ABOUT WIDGET
+    //////////////////////////////////////////
+    &-widget {
+        @media(max-width: $screen-sm-max) {
+            margin-bottom: 40px;
+        }
+    }
+    
+    &-about {
+        &__content {
+            color: white;
+            border-right: 1px solid white;
+        }
+        &__title {
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+        &__text {
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+    }
+    //MENU WIDGET
+    //////////////////////////////////////////
+    &-menu {
+        margin-bottom: 40px;
+        &__list {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+        }
+        
+        &__item {
+            position: relative;
+            
+            a {
+                color: white;
+                text-decoration: none;
+                transition: 0.3s ease;
+            }
+            
+            &+& {
+                @media(min-width: $screen-lg-min) {
+                    &:before {
+                        content: '';
+                        border-right: 2px solid $primary-color;
+                        position: absolute;
+                        width: 2px;
+                        height: 100%;
+                        right: -50%;
+                    }
+                }
+            }
+            
+            &:hover {
+                a {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+    
+    //SUBSCRIBE WIDGET
+    //////////////////////////////////////////
+    &-subscribe {
+        margin-bottom: 40px;
+        
+        &__title {
+            color: white;
+            font-size: 17px;
+            margin-bottom: 20px;
+            
+            i {
+                margin-left: 15px;
+            }
+        }
+        
+        &__field {
+            display: flex;
+        }
+        
+        &__input {
+            flex-grow: 1;
+            background: rgba(255, 255, 255, 0.85);
+            border: none;
+            height: 30px;
+            border-radius: 0px 10px 10px 0px;
+            padding-right: 10px;
+            
+            &:focus {
+                outline: none;
+            }
+        }
+        
+        &__button {
+            background: $primary-color;
+            color: white;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            padding: 0 20px;
+            margin-right: -10px;
+            cursor: pointer;
+            outline: none;
+            transition: 0.3s ease;
+            &:hover {
+                background: $secondary-color;
+            }
+        }
+    }
+    
+    //SOCIAL ICONS WIDGET
+    //////////////////////////////////////////
+    &-social-icons {
+        display: flex;
+        justify-content: flex-end;
+        
+        &__icon {
+            display: inline-block;
+            background: white;
+            color: $primary-color;
+            width: 25px;
+            height: 25px;
+            line-height: 24px;
+            text-align: center;
+            border-radius: 50%;
+            transition: 0.3s ease;
+            
+            &+&{
+                margin-right: 25px;
+            }
+            
+            &:hover {
+                box-shadow: 0px 0px 0px 3px $secondary-color;
+                color: $secondary-color;
+            }
+        }
+    }
+    
+    //COPYRIGHTS
+    //////////////////////////////////////////
+    &-copyrights {
+        color: white;
+        font-size: 12px;
+        margin-top: 20px;
+        
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

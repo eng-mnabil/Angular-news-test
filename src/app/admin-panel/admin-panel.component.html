@@ -1,0 +1,26 @@
+<div class="container">
+    <button type="button" class="btn btn-primary mt-3 mb-3" (click)="create()">{{ "Create" | translate }}</button>        
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">{{ "Title" | translate }}</th>
+                <th scope="col">{{ "Edit" | translate }}</th>
+                <th scope="col">{{ "Delete" | translate }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let newPost of newsPosts">
+                <th scope="row">{{newPost?.id}}</th>
+                <td>{{newPost?.title}}</td>
+                <td>
+                    <button type="button" class="btn btn-primary" (click)="edit(newPost?.id)">{{ "Edit" | translate }}</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger" (click)="delete(newPost?.id)">{{ "Delete" | translate }}</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

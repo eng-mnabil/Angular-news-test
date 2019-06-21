@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="new-post__media col-md-3">
+        <img src="assets/img/{{newPost?.image}}" alt="">
+    </div>    
+    <div class="new-post__content col-md-9">
+        <div class="new-post__views-and-share">
+            <p class="new-post__views">
+                <i class="icon-eye"></i>
+                {{newPost?.views}}
+            </p>
+            <div class="new-post__share">
+                <i class="new-post__share__icon icon-share"></i>
+                <div class="new-post__share__box">
+                    <i class="icon-mail"></i>
+                    <i class="icon-google"></i>
+                    <i class="icon-twitter"></i>
+                    <i class="icon-facebook"></i>
+                </div>
+            </div>
+        </div>
+        <h4 class="new-post__author">
+            <i class="icon-pencil"></i>
+            {{newPost?.author}}
+        </h4>
+        <p class="new-post__date">
+            <i class="icon-clock"></i>
+            {{newPost?.date}}
+        </p>
+        <div class="new-post__category">
+            {{newPost?.category}}
+        </div>
+        <h3 class="new-post__title">
+            {{newPost?.title}}
+        </h3>
+        <p class="new-post__text">
+            {{newPost?.details}}
+        </p>
+    </div>
+</div>

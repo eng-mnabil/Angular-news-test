@@ -1,0 +1,88 @@
+@import '../../_variables.scss';
+@import 'header.menu.scss';
+
+.header {
+    // TOP BAR
+    ///////////////////////////////////////////////////
+    &__top-bar {
+        background: $primary-color;
+        padding: 7px 0;
+        
+        &__container {
+            display: flex;
+        }
+    }
+    
+    &__social-icons {
+        justify-self: flex-end;
+        margin-right: auto;
+    }
+    
+    &__social-icon {
+        display: inline-block;
+        
+        &:first-child {
+            direction: ltr;
+            text-align: left;
+            border-left: 1px solid white;
+            padding-left: 20px;
+            color: white;
+            @media(max-width: $screen-xs-max) {
+                display: block;
+                padding-left: 0;
+                border-left: 0;
+                margin-bottom: 5px;
+            }
+        }
+        
+        & + & {
+            margin-right: 20px;
+        }
+        
+        
+        i {
+            display: inline-block;
+            width: 21px;
+            height: 21px;
+            background: white;
+            border-radius: 50%;
+            line-height: 21px;
+            font-size: 14px;
+            text-align: center;
+            color: $primary-color;
+            transition: 0.3s ease;
+            
+        }
+        
+        &:hover {
+            i {
+                box-shadow: 0px 0px 0px 3px $secondary-color;
+                color: $secondary-color;
+            }
+        }
+    }
+    // MAIN BAR
+    ///////////////////////////////////////////////////
+    &__main-bar {
+        
+        &__container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }    
+    }
+    
+    &__logo {
+        
+    }
+    // IMAGE BAR
+    ///////////////////////////////////////////////////
+    &__image-bar {
+        height: 160px;
+        background: url('../../assets/img/header-bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: inset 0px 2px 6px -3px #868686;
+    }
+}

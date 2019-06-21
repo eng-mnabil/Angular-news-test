@@ -1,0 +1,30 @@
+@import '../../_variables.scss';
+
+.sidebar-widget {
+    &__title {
+        color: $primary-color-dark;
+        font-size: 28px;
+        border-bottom: 1px solid #cacaca;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+        i {
+            margin-left: 15px;
+        }
+    }
+    &+& {
+        border-top: 5px solid #cacaca;
+        margin-top: 25px;
+        padding-top: 25px;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+.sidebar-news__post{
+    display: block;
+    
+    &+& {
+        margin-top: 10px;
+    }
+}

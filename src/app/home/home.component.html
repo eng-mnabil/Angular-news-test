@@ -1,0 +1,76 @@
+<app-header></app-header>
+<div class="page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <app-breadcrumb></app-breadcrumb>
+                <h2 class="home-news__title">
+                    {{ "Available news list" | translate }}
+                </h2>
+                <!-- FILTERATION BAR -->
+                <div class="row">
+                    <div class="form-group col-md-2">
+                        <label for="date-select">{{ "Date" | translate }}</label>
+                        <select [(ngModel)]="selectedDate" id="date-select" class="form-control">
+                            <option value="">{{ "All" | translate }}</option>
+                            <option *ngFor="let d of dates" [value]="d">{{d}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="author-select">{{ "Author" | translate }}</label>
+                        <select [(ngModel)]="selectedAuthor" id="author-select" class="form-control">
+                            <option value="">{{ "All" | translate }}</option>
+                            <option *ngFor="let a of authors" [value]="a">{{a}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="category-select">{{ "Category" | translate }}</label>
+                        <select [(ngModel)]="selectedCategory" id="category-select" class="form-control">
+                            <option value="">{{ "All" | translate }}</option>
+                            <option *ngFor="let c of categories" [value]="c">{{c}}</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- FILTERATION BAR END -->
+                <!-- ALL NEWS -->
+                <div class="home-news__list">
+                    <app-new-post class="home-news__post" *ngFor="let newPost of newsPosts | filterBy:{'date':selectedDate, 'author':selectedAuthor, 'category':selectedCategory}" [newPost]="newPost"></app-new-post>
+                </div>
+                <!-- ALL NEWS END -->
+                <!-- PAGINATION -->
+                <div class="home-news__pagination">
+                    <a href="#" class="home-news__pagination__prev">
+                        <i class="icon-right-open"></i>
+                        {{ "Previous" | translate }}
+                    </a>
+                    <a href="#" class="home-news__pagination__page">
+                        1
+                    </a>
+                    <a href="#" class="home-news__pagination__page">
+                        2
+                    </a>
+                    <a href="#" class="home-news__pagination__page home-news__pagination__page--active">
+                        3
+                    </a>
+                    <a href="#" class="home-news__pagination__page">
+                        4
+                    </a>
+                    <a href="#" class="home-news__pagination__page">
+                        5
+                    </a>
+                    <a href="#" class="home-news__pagination__next">
+                        {{ "Next" | translate }}
+                        <i class="icon-left-open"></i>
+                    </a>
+                </div>
+                <!-- PAGINATION END -->
+            </div>
+            <!-- SIDEBAR -->
+            <div class="col-md-3">
+                <app-sidebar class="home-sidebar"></app-sidebar>
+            </div>
+            <!-- SIDEBAR END -->
+        </div>
+    </div>  
+</div>
+<app-footer></app-footer>

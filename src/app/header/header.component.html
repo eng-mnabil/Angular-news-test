@@ -1,0 +1,76 @@
+<div class="header__top-bar">
+    <div class="header__top-bar__container container">
+        <div class="header__social-icons">
+            <a href="mailto:info@islamictheme.com" class="header__social-icon">
+                <i class="icon-mail"></i>
+                info@islamictheme.com
+            </a>
+            <a href="#" target="_blank" class="header__social-icon">
+                <i class="icon-facebook"></i>
+            </a>
+            <a href="#" target="_blank" class="header__social-icon">
+                <i class="icon-twitter"></i>
+            </a>
+            <a href="#" target="_blank" class="header__social-icon">
+                <i class="icon-instagram"></i>
+            </a>
+            <a href="#" target="_blank" class="header__social-icon">
+                <i class="icon-youtube"></i>
+            </a>
+            <a href="#" target="_blank" class="header__social-icon">
+                <i class="icon-linkedin"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="header__main-bar">
+    <div class="header__main-bar__container container">
+        <a href="#/home" class="header__logo">
+            <img src="assets/img/logo.png" alt="">
+        </a>
+        
+        <i class="header__menu-button icon-menu" (click)="toggleMenu($event)"></i>
+        
+        <nav class="header__menu" [ngClass]="responsiveMenuActive? 'header__menu--active': '' ">
+            <i class="header__menu-close icon-window-close" (click)="closeMenu($event)"></i>
+            <ul class="header__menu__list">
+                <li class="header__menu__item">
+                    <a href="#">{{"Home" | translate}}</a>
+                </li>
+                <li class="header__menu__item header__menu__item--active">
+                    <a href="#"><i class="icon-down-open"></i>{{"News" | translate}}</a>
+                    <ul class="header__menu__submenu">
+                        <li class="header__menu__submenu__item">
+                            <a href="#">{{"link" | translate}}</a>
+                        </li>
+                        <li class="header__menu__submenu__item">
+                            <a href="#">{{"link" | translate}}</a>
+                        </li>
+                        <li class="header__menu__submenu__item">
+                            <a href="#">{{"link" | translate}}</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__menu__item">
+                    <a href="#">{{"Lessons and speeches" | translate}}</a>
+                </li>
+                <li class="header__menu__item">
+                    <a href="#">{{"About us" | translate}}</a>
+                </li>
+                <li class="header__menu__item">
+                    <a href="#">{{"Contact us" | translate}}</a>
+                </li>
+                <li class="header__menu__item">
+                    <a href="#">{{"More" | translate}}</a>
+                    <i class="header__menu__search icon-search" (click)="toggleSearch($event)"></i>
+                    <input type="text" placeholder="{{ 'Search ...'| translate }}" class="header__menu__search__input" [ngClass]="searchActive? 'header__menu__search__input--active': '' ">
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="header__image-bar">
+    <!-- <img src="assets/img/header-bg.jpg" alt="header background"> -->
+</div>
