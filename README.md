@@ -6,6 +6,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## System guide
+You have to be logged in to access the system, so you will be redirected to `/login` on startup, use one of these accounts:
+email:`admin@admin.com`  password:`password`  
+guest:`guest@guest.com`  password:`password`
+
+The guest user is authorized to access the home view only. `/home`
+The Admin has the guest privileges + access to the admin panel `/admin`, through which he can do CRUD operation on the news post type
+
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
