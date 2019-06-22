@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
+import {Location} from '@angular/common';
 
 import { NewsService } from '../../_services';
 
@@ -24,6 +25,7 @@ export class CreatePostComponent implements OnInit {
       private formBuilder: FormBuilder,
       private route: ActivatedRoute,
       private router: Router,
+      private location: Location
   ) { }
 
   ngOnInit() {
@@ -68,6 +70,7 @@ export class CreatePostComponent implements OnInit {
       if(this.post) {
           this.newsService.update(this.newForm.value).subscribe(result=>{
               console.log(result);
+              this.location.back();
           }, err=>{
               console.log(err);
           })
@@ -75,6 +78,7 @@ export class CreatePostComponent implements OnInit {
       else {
           this.newsService.create(this.newForm.value).subscribe(result=>{
               console.log(result);
+              this.location.back();
           }, err=>{
               console.log(err);
           })
